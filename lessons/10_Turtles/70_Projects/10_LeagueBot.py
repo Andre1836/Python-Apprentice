@@ -17,4 +17,4 @@ screen.bgcolor('white')
 
 t = turtle.Turtle()
 
-... # Your Code Here
+'leaguebot_bolt.gif'

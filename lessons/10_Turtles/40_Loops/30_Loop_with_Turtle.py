@@ -13,4 +13,17 @@ uid: BpGnQq64
 name: Loop With Turtle
 """
 
-... # Your code here
+import turtle
+turtle.setup(600, 600, 0, 0)
+
+tina = turtle.Turtle()
+
+tina.shape('turtle')                    
+tina.speed(2)    
+for i in range(6):
+    tina.forward(150)                       
+    tina.left(360/6)
+
+
+
+turtle.exitonclick()        
