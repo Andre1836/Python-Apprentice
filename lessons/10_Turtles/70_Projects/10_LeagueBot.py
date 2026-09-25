@@ -17,4 +17,22 @@ screen.bgcolor('white')
 
 t = turtle.Turtle()
 
-'leaguebot_bolt.gif'
+def set_turtle_image(turtle, image_name):
+    """Set the turtle's shape to a custom image."""
+
+    from pathlib import Path                        # Import Path from pathlib module
+    image_dir = Path(__file__).parent.parent / "images"    # Define the directory containing images
+    image_path = str(image_dir / image_name)        # Create the full path to the image file
+
+    screen = turtle.getscreen()                     # Get the turtle's screen
+    screen.addshape(image_path)                     # Register the image as a shape
+    turtle.shape(image_path)                        # Set the turtle's shape to the image
+
+
+set_turtle_image(t, 'pikachu.gif')
+t.pencolor('red')
+
+for i in range(6):
+    t.forward(82)
+    t.left(360/6)
+turtle.exitonclick()
